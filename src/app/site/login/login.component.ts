@@ -26,8 +26,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     let titlePattern = '[a-zA-Z0-9]{6,}';
     this.loginForm = this.fb.group({
-      username: ['', Validators.required, Validators.minLength(6), Validators.pattern(titlePattern)],
-      password: ['', Validators.required, Validators.minLength(8), Validators.maxLength(16)]
+      username: ['', [Validators.required, Validators.minLength(6), Validators.pattern(titlePattern)]],
+      password: ['', [Validators.required, Validators.minLength(8)]]
     });
 
   }

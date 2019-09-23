@@ -12,7 +12,7 @@
           <tr>
             <td>
               <mat-form-field class="example-full-width">
-                <input  matInput placeholder="Username" [(ngModel)]="username" formControlName="username" required>
+                <input  matInput placeholder="Username" formControlName="username" required>
               </mat-form-field>
             </td>
             <td *ngIf="isSubmitted && f.username.errors">Username is required</td>
@@ -20,9 +20,10 @@
           <tr>
             <td>
               <mat-form-field class="example-full-width">
-                <input matInput placeholder="Password" [(ngModel)]="password"  type="password" formControlName="password" required>
+                <input matInput placeholder="Password" type="password" formControlName="password" required>
               </mat-form-field>
             </td>
+            <td *ngIf="isSubmitted && f.password.errors">Password is required</td>
           </tr>
         </table>
       </form>

@@ -7,11 +7,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { LOCALE_ID } from '@angular/core';
 import fr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './site/login/login.component';
+import { NavmenuComponent } from './site/shared/navmenu/navmenu.component';
 registerLocaleData(fr);
 
 @NgModule({
@@ -19,10 +21,12 @@ registerLocaleData(fr);
     AppComponent,
     HomeComponent,
     LoginComponent,
+    NavmenuComponent,
   ],
   imports: [
     BrowserModule,
     MaterialModule,
+    MatCheckboxModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
