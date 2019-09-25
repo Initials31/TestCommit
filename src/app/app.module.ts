@@ -14,6 +14,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './site/login/login.component';
 import { NavmenuComponent } from './site/shared/navmenu/navmenu.component';
+import { PlayersComponent } from './site/data/players/players.component';
+import { FooterComponent } from './site/shared/footer/footer.component';
+import { EventsComponent } from './site/data/events/events.component';
+import { ContestsComponent } from './site/data/contests/contests.component';
 registerLocaleData(fr);
 
 @NgModule({
@@ -22,6 +26,10 @@ registerLocaleData(fr);
     HomeComponent,
     LoginComponent,
     NavmenuComponent,
+    PlayersComponent,
+    FooterComponent,
+    EventsComponent,
+    ContestsComponent
   ],
   imports: [
     BrowserModule,

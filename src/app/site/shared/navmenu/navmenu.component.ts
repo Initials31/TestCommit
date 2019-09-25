@@ -16,7 +16,18 @@ export class NavmenuComponent implements OnInit {
   ngOnInit() {
   }
 
+  showplayers(){
+    this.router.navigate(['/players']);
+ }
 
+ showevents(){
+  this.router.navigate(['/events']);
+}
+
+showcontests(){
+  this.router.navigate(['/contests']);
+}
+  
   logout(){
     this.authService.logout();
     this.router.navigateByUrl('/login');

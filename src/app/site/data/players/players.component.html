@@ -1,0 +1,19 @@
+<table class="table table-dark table-striped">
+        <thead>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Date de souscription</th>
+            <th></th>
+            <th></th>
+        </thead>
+    
+        <tbody>
+          <tr *ngFor='let p of listPlayers'>
+            <td >{{p.firstName}}</td>
+            <td >{{p.lastName}}</td>  
+            <td >{{p.mail}}</td>
+            <td>{{p.subscriptionDate | date:"dd/MM/yyyy"}}</td>
+          </tr>
+        </tbody>
+        </table>

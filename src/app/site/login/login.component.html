@@ -1,6 +1,13 @@
-<mat-card class="login-card">
+<!DOCTYPE html>  
+<html>   
+<head> 
+    <title>  
+    </title> 
+</head>  
+<body>
+  <mat-card class="login-card">
     <mat-card-header>
-      <mat-card-title>Login</mat-card-title>
+      <mat-card-title>Oh my God !<br> You have been disconnected...</mat-card-title>
     </mat-card-header>
     <mat-card-content>    
       <form  [formGroup]="loginForm" class="my-login">
@@ -30,6 +37,8 @@
       <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
     </mat-card-content>
     <mat-card-actions>
-      <button  mat-raised-button (click)="login()">Login</button>
+      <button mat-raised-button (click)="login()">Login</button>
     </mat-card-actions>
   </mat-card>
+  </body>
+  </html>
