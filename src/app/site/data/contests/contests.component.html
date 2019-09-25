@@ -1,1 +1,14 @@
-<p>contests works!</p>
+<h6 style="color: black"><a routerLink="/">Mypronos</a> > Concours </h6>
+<table class="table table-dark table-striped">
+    <thead>
+        <th>Label</th>
+        <th></th>
+        <th></th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor='let c of listContests'>
+        <td >{{c.label}}</td>
+      </tr>
+    </tbody>
+    </table>

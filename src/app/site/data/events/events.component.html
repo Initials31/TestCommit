@@ -1,1 +1,24 @@
-<p>events works!</p>
+<h6 style="color: black"><a routerLink="/">Mypronos</a> > Evenements </h6>
+<table class="table table-dark table-striped">
+    <thead>
+        <th>Label</th>
+        <th>Date de l'évènement</th>
+        <th>Date de début</th>
+        <th>Date de fin</th>
+        <th>Coefficient</th>
+        <th>Concours</th>
+        <th></th>
+        <th></th>
+    </thead>
+
+    <tbody>
+      <tr *ngFor='let e of listEvents'>
+        <td >{{e.label}}</td>
+        <td >{{e.eventDate | date:"dd/MM/yyyy"}}</td>  
+        <td >{{e.openDate | date:"dd/MM/yyyy"}}</td>
+        <td >{{e.closeDate | date:"dd/MM/yyyy"}}</td>
+        <td >{{e.coeff}}</td>
+        <td >{{e.contest.label}}</td>
+      </tr>
+    </tbody>
+    </table>
