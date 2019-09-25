@@ -29,7 +29,13 @@ export class PlayersComponent implements OnInit {
     this.playerService.getAllPlayers()
       .subscribe(
         data => this.listPlayers = data);
-     
+      }
+      
+      public createPlayer(player : Player) {
+      this.playerService.createPlayer(player)
+      .subscribe(
+        data => this.ngOnInit()
+        )
       }
 
       public deletePlayer(id: number) {

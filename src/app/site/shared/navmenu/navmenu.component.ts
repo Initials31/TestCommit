@@ -27,6 +27,10 @@ export class NavmenuComponent implements OnInit {
 showcontests(){
   this.router.navigate(['/contests']);
 }
+
+accueil(){
+  this.router.navigate(['/']);
+}
   
   logout(){
     this.authService.logout();
