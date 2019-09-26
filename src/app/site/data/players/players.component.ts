@@ -30,11 +30,25 @@ export class PlayersComponent implements OnInit {
       .subscribe(
         data => this.listPlayers = data);
       }
+
+      public getPlayerById(id: number) {
+        this.playerService.getPlayerById(id)
+        .subscribe (
+          data => this.ngOnInit()
+        )
+      }
       
       public createPlayer(player : Player) {
       this.playerService.createPlayer(player)
       .subscribe(
         data => this.ngOnInit()
+        )
+      }
+
+      public updatePlayer (id : number) {
+        this.playerService.updatePlayer(id)
+        .subscribe(
+          data => this.ngOnInit()
         )
       }
 

@@ -31,7 +31,11 @@ export class PlayerserviceService {
   }
 
   public deletePlayer(id: number): Observable<Player> {
-    return this.http.delete<Player>(`${this.baseURL}/players/delete/${id}`, this.httpOptions);
+    return this.http.post<Player>(`${this.baseURL}/players/delete/${id}`, this.httpOptions);
+  }
+
+  public updatePlayer(id: number): Observable<Player> {
+    return this.http.post<Player>(`${this.baseURL}/players/update/${id}`, this.httpOptions);
   }
 
   
