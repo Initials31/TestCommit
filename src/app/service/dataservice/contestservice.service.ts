@@ -8,7 +8,7 @@ import { Contest } from 'src/app/Models/contests';
 })
 export class ContestserviceService {
   
-  baseURL = 'http://localhost:8086/mypronos/api';
+  baseURL = 'http://localhost:8086/mypronos';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -27,10 +27,10 @@ export class ContestserviceService {
   }
 
   public createContest(contest:Contest): Observable<Contest>{
-    return this.http.post<Contest>(`${this.baseURL}/create/contest`, contest, this.httpOptions);
+    return this.http.post<Contest>(`${this.baseURL}/contest/create`, contest, this.httpOptions);
   }
 
   public deleteContest(id: number): Observable<Contest> {
-    return this.http.delete<Contest>(`${this.baseURL}/contest/${id}`, this.httpOptions);
+    return this.http.delete<Contest>(`${this.baseURL}/delete/contest/${id}`, this.httpOptions);
   }
 }

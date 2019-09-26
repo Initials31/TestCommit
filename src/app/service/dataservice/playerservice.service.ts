@@ -8,7 +8,7 @@ import { Player } from 'src/app/Models/players';
 })
 export class PlayerserviceService {
 
-  baseURL = 'http://localhost:8086/mypronos/api';
+  baseURL = 'http://localhost:8086/mypronos';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -19,19 +19,19 @@ export class PlayerserviceService {
   constructor(private http: HttpClient) { }
 
   public getAllPlayers(): Observable<Player[]>{
-    return this.http.get<Player[]>(`${this.baseURL}/player`, this.httpOptions);
+    return this.http.get<Player[]>(`${this.baseURL}/players`, this.httpOptions);
   }
 
   public getPlayerById(id:number): Observable<Player> {
-    return this.http.get<Player>(`${this.baseURL}/player/${id}`, this.httpOptions);
+    return this.http.get<Player>(`${this.baseURL}/players/${id}`, this.httpOptions);
   }
 
   public createPlayer(player:Player): Observable<Player>{
-    return this.http.post<Player>(`${this.baseURL}/create/player`, player, this.httpOptions);
+    return this.http.post<Player>(`${this.baseURL}/players/create`, player, this.httpOptions);
   }
 
   public deletePlayer(id: number): Observable<Player> {
-    return this.http.delete<Player>(`${this.baseURL}/player/${id}`, this.httpOptions);
+    return this.http.delete<Player>(`${this.baseURL}/players/delete/${id}`, this.httpOptions);
   }
 
   
